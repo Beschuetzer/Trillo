@@ -7,8 +7,12 @@
 //////////////////////////////////////////////
 //search
 .search {
-    &__input {
+    flex: 0 0 40%;
 
+
+    &__input {
+        font-family: inherit;
+        border-radius: 100px;
     }
     &__button {
 
@@ -25,6 +29,10 @@
 //////////////////////////////////////////////
 //user navigation
 .user-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     &__icon-box {
 
     }
@@ -39,7 +47,7 @@
 
     }
     &__user-photo {
-        height: 2.33 * $default-font-size;
+        height: 1.75 * $default-font-size;
         border-radius: 50%;
     }
     &__user-name {
