@@ -1,12 +1,13 @@
 .header {
     // height: $default-font-size * 4;
-    padding: $default-font-size * .5 $default-font-size * 2;
+    font-size: $default-font-size * .9;
+    padding: 0 $default-font-size * 2;
     background-color: $color-white;
     border-bottom: 1rem solid $color-grey-light-2;
 
     display: flex;
     justify-content: space-between;
-    justify-self: center;
+    align-items: center;
 }
 
 .content {

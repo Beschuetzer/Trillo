@@ -1,25 +1,61 @@
 //////////////////////////////////////////////
 //LOGO
 .logo {
-    height: $default-font-size * 2
+    height: $default-font-size * 2;
+    margin-left: $default-font-size * 1.125;
 }
 
 //////////////////////////////////////////////
 //search
 .search {
     flex: 0 0 40%;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__input {
         font-family: inherit;
         border-radius: 100px;
+        font-size: inherit;
+        background-color: $color-grey-light-2;
+        border: none;
+        padding: $default-font-size / 2 $default-font-size;
+        width: 90%;
+        transition: width .25s ease;
+        margin-right: -$default-font-size * 2;
+        margin-left: $default-font-size / 2;
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-grey-light-3;
+        }
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-grey-light-4;
+        }
     }
     &__button {
-
+        border: none;
+        background-color: $color-grey-light-2;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(.2rem);
+        }
     }
     &__icon {
         height: $default-font-size * 1.25;
         width: $default-font-size * 1.25;
+        border: none;
+        fill: $color-grey-dark-3;
+    }
+
+    &__input:focus ~ &__button>&__icon {
+        fill: $color-grey-dark-1;
+    }
+    &__input:focus ~ &__button{
+        background-color: $color-grey-light-3;
     }
 }
 
@@ -29,31 +65,51 @@
 //////////////////////////////////////////////
 //user navigation
 .user-nav {
+    height: $default-font-size * 3;
+    align-self: stretch;
+    & > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 $default-font-size;
+        cursor: pointer;
+        height: 100%;
+        &:hover{
+            background-color: $color-grey-light-2;
+        }
+    }
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     &__icon-box {
-
+        position: relative;
     }
     &__icon {
         height: $default-font-size * 1.5;
         width: $default-font-size * 1.5;
+        fill: $color-grey-dark-2;
     }
     &__notification {
-
-    }
-    &__user {
-
+        font-size: $default-font-size / 2;
+        height: $default-font-size * 1;
+        width: $default-font-size * 1;
+        border-radius: 50%;
+        background-color: $color-primary;
+        color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 27.5%;
+        right: 20%;
     }
     &__user-photo {
         height: 1.75 * $default-font-size;
         border-radius: 50%;
     }
     &__user-name {
-        
+        margin-left: $default-font-size / 4;
+        font-style: italic;
     }
-    &__username {
 
-    }
 }

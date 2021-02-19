@@ -158,40 +158,115 @@ body {
 
 .logo {
   height: 3.2rem;
+  margin-left: 1.8rem;
 }
 
 .search {
   flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .search__input {
   font-family: inherit;
   border-radius: 100px;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  width: 90%;
+  transition: width 0.25s ease;
+  margin-right: -3.2rem;
+  margin-left: 0.8rem;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: #f0eeee;
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+.search__button {
+  border: none;
+  background-color: #f4f2f2;
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(0.2rem);
 }
 .search__icon {
   height: 2rem;
   width: 2rem;
+  border: none;
+  fill: #999;
+}
+.search__input:focus ~ .search__button > .search__icon {
+  fill: #333;
+}
+.search__input:focus ~ .search__button {
+  background-color: #f0eeee;
 }
 
 .user-nav {
+  height: 4.8rem;
+  align-self: stretch;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+.user-nav > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.6rem;
+  cursor: pointer;
+  height: 100%;
+}
+.user-nav > *:hover {
+  background-color: #f4f2f2;
+}
+.user-nav__icon-box {
+  position: relative;
 }
 .user-nav__icon {
   height: 2.4rem;
   width: 2.4rem;
+  fill: #777;
+}
+.user-nav__notification {
+  font-size: 0.8rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background-color: #eb2f64;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 27.5%;
+  right: 20%;
 }
 .user-nav__user-photo {
   height: 2.8rem;
   border-radius: 50%;
 }
+.user-nav__user-name {
+  margin-left: 0.4rem;
+  font-style: italic;
+}
+
 .header {
-  padding: 0.8rem 3.2rem;
+  font-size: 1.44rem;
+  padding: 0 3.2rem;
   background-color: #fff;
   border-bottom: 1rem solid #f4f2f2;
   display: flex;
   justify-content: space-between;
-  justify-self: center;
+  align-items: center;
 }
 
 .content {
