@@ -1,0 +1,43 @@
+
+    /* global reset;  box-sizing is set on body and set to inherit on all other elements */
+    *, *::after, *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+    html {
+        /* 62.5% of the browser supplied font-size is usually 16px */
+        /* bad practice to declarer px font-size here as it removes users ability to set font-size in browser */
+        font-size: 62.5%;
+        @include respond(big-desktop) {
+            font-size: 75%;
+        }
+        @include respond(tab-land) {
+            font-size: 56.25%;
+        }
+        @include respond(tab-port) {
+            font-size: 43.75%;
+        }
+        @include respond(phone) {
+            font-size: 37.5%;
+        }
+        @include respond(small-font) {
+            font-size: 1.5038vmin;
+        }
+
+        box-sizing: border-box;
+        //order to add media queries:
+        //base + typography > general + grid > page layout > components
+    }
+    /* everything related to font goes in body */
+    body{ 
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    //Style selected text
+    ::selection {
+        //background-color: $color-primary;
+        //color: $color-white;
+    }
+    
