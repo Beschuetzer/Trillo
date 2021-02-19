@@ -1,0 +1,51 @@
+//////////////////////////////////////////////
+//LOGO
+.logo {
+    height: $default-font-size * 2
+}
+
+//////////////////////////////////////////////
+//search
+.search {
+    &__input {
+
+    }
+    &__button {
+
+    }
+    &__icon {
+        height: $default-font-size * 1.25;
+        width: $default-font-size * 1.25;
+    }
+}
+
+
+
+
+//////////////////////////////////////////////
+//user navigation
+.user-nav {
+    &__icon-box {
+
+    }
+    &__icon {
+        height: $default-font-size * 1.5;
+        width: $default-font-size * 1.5;
+    }
+    &__notification {
+
+    }
+    &__user {
+
+    }
+    &__user-photo {
+        height: 2.33 * $default-font-size;
+        border-radius: 50%;
+    }
+    &__user-name {
+        
+    }
+    &__username {
+
+    }
+}

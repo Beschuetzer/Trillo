@@ -1,5 +1,23 @@
 
     /* global reset;  box-sizing is set on body and set to inherit on all other elements */
+    :root {
+        //color
+        --color-primary: #eb2f64;
+        --color-primary-light: #ff3366;
+        --color-primary-dark: #ba265d;
+
+        --color-grey-light-1: #faf9f9;
+        --color-grey-light-2: #f4f2f2;
+        --color-grey-light-3: #f0eeee;
+        --color-grey-light-4: #ccc;
+
+        --color-grey-dark-1: #333;
+        --color-grey-dark-2: #777;
+        --color-grey-dark-3: #999;
+
+        --color-white: #fff;
+        --color-black: #000;
+    }
     *, *::after, *::before {
         margin: 0;
         padding: 0;
@@ -34,6 +52,11 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         line-height: 1.6;
+        background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        color: var(--color-grey-dark-2);
+
     }
     //Style selected text
     ::selection {

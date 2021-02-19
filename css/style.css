@@ -1,4 +1,19 @@
 /* global reset;  box-sizing is set on body and set to inherit on all other elements */
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -42,6 +57,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  color: var(--color-grey-dark-2);
 }
 
 body {
@@ -137,69 +156,51 @@ body {
   text-align: center !important;
 }
 
-.row {
-  max-width: 114rem;
-  margin: 0 auto;
+.logo {
+  height: 3.2rem;
 }
-.row::after {
-  display: table;
-  clear: both;
-  content: "";
+
+.search__icon {
+  height: 2rem;
+  width: 2rem;
 }
-@media only screen and (max-width: 56.25em) {
-  .row {
-    max-width: 85.6rem;
-    padding: 0 3rem;
-  }
+
+.user-nav__icon {
+  height: 2.4rem;
+  width: 2.4rem;
 }
-@media only screen and (max-width: 37.5em) {
-  .row {
-    margin: 0;
-    max-width: 100%;
-  }
+.user-nav__user-photo {
+  height: 3.728rem;
+  border-radius: 50%;
 }
-.row:not(:last-child) {
-  margin-bottom: 8rem;
+.header {
+  height: 6.4rem;
+  background-color: #fff;
+  border-bottom: 1rem solid #f4f2f2;
 }
-@media only screen and (max-width: 56.25em) {
-  .row:not(:last-child) {
-    margin-bottom: 6rem;
-  }
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.row [class^=col-] {
-  float: left;
+
+.container {
+  max-width: 120rem;
+  margin: 9.6rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: 0 1.6rem 6.4rem rgba(0, 0, 0, 0.33);
+  min-height: 50rem;
 }
-.row [class^=col-]:not(:last-child) {
-  margin-right: 6rem;
+
+.sidebar {
+  background-color: #333;
+  flex: 0 0 20%;
 }
-@media only screen and (max-width: 56.25em) {
-  .row [class^=col-]:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4rem;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .row [class^=col-] {
-    width: 100% !important;
-  }
-}
-.row .col-1-of-2 {
-  width: calc((100% - 1 * 6rem) / 2);
-}
-.row .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
-}
-.row .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
-}
-.row .col-2-of-3 {
-  width: calc((2 * (100% - 2 * 6rem) / 3) + 6rem);
-}
-.row .col-2-of-4 {
-  width: calc((100% - 1 * 6rem) / 2);
-}
-.row .col-3-of-4 {
-  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+
+.hotel-view {
+  background-color: #fff;
+  flex: 1 1;
 }
 
 /*# sourceMappingURL=style.css.map */
