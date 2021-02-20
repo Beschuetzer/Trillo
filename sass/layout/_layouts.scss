@@ -65,8 +65,8 @@
         transform: scaleY(0);
         transform-origin: bottom;
         transition: 
-            transform .166s cubic-bezier(0, 1, 1, 0), 
-            width .33s .2s cubic-bezier(1,0,0,1);
+            transform .25s linear, 
+            width .33s .25s cubic-bezier(1,0,0,1);
     }
     &__item:hover::before, &__item--active::before {
         transform: scaleY(1);
@@ -116,8 +116,11 @@
 }
 
 .description {
+    font-size: $default-font-size * .85;
     flex: 0 0 60%;
     margin-right: $default-font-size * 3;
+    background-color: $color-white;
+    box-shadow: $shadow-light;
 }
 .user-reviews {
     flex: 1;

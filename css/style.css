@@ -409,7 +409,7 @@ body {
   background-color: #eb2f64;
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 0.166s cubic-bezier(0, 1, 1, 0), width 0.33s 0.2s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.25s linear, width 0.33s 0.25s cubic-bezier(1, 0, 0, 1);
 }
 .side-nav__item:hover::before, .side-nav__item--active::before {
   transform: scaleY(1);
@@ -454,8 +454,11 @@ body {
 }
 
 .description {
+  font-size: 1.36rem;
   flex: 0 0 60%;
   margin-right: 4.8rem;
+  background-color: #fff;
+  box-shadow: 0 1.6rem 4.8rem rgba(0, 0, 0, 0.11);
 }
 
 .user-reviews {

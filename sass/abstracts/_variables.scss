@@ -25,6 +25,7 @@ $color-black: #000;
 
 $line: .1rem solid $color-grey-light-2;
 
-
 //box-shadow
 $box-shadow-dark: .33;
+$shadow-light: 0 $default-font-size $default-font-size * 3 rgba($color-black, $box-shadow-dark / 3);
+$shadow-dark: 0 $default-font-size $default-font-size * 4 rgba($color-black, $box-shadow-dark);
