@@ -231,6 +231,9 @@ body {
 .user-nav__icon-box {
   position: relative;
 }
+.user-nav__icon-box:active, .user-nav__user:active {
+  background-color: #e8e4e4;
+}
 .user-nav__icon {
   height: 2.4rem;
   width: 2.4rem;
@@ -267,6 +270,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 
 .content {
@@ -289,6 +293,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 50rem;
+  user-select: none;
 }
 
 .hotel-view {
@@ -296,9 +301,52 @@ body {
   flex: 1 1;
 }
 
+.side-nav {
+  font-size: 1.44rem;
+  list-style: none;
+  margin-top: 3.2rem;
+}
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background-color: #eb2f64;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.166s cubic-bezier(0, 1, 1, 0), width 0.33s 0.2s cubic-bezier(1, 0, 0, 1);
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__item:active::before {
+  background-color: #bb1242;
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: #faf9f9;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
 .side-nav__icon {
   height: 2rem;
   width: 2rem;
+  margin-right: 1.6rem;
+  fill: currentColor;
 }
 
 .legal {

@@ -84,6 +84,9 @@
     &__icon-box {
         position: relative;
     }
+    &__icon-box:active, &__user:active {
+        background-color: darken($color-grey-light-2, 5%);
+    }
     &__icon {
         height: $default-font-size * 1.5;
         width: $default-font-size * 1.5;
