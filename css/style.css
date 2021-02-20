@@ -1,3 +1,13 @@
+@keyframes pulsate {
+  50% {
+    transform: scale(1.05) translateY(-0.2rem);
+    box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    box-shadow: none;
+  }
+}
 /* global reset;  box-sizing is set on body and set to inherit on all other elements */
 :root {
   --color-primary: #eb2f64;
@@ -274,6 +284,13 @@ body {
   display: flex;
   align-items: center;
 }
+.overview__heading {
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.6rem 1.6rem 1.6rem 3.2rem;
+}
 .overview__stars {
   margin-right: auto;
 }
@@ -282,6 +299,56 @@ body {
   height: 1.6rem;
   fill: #eb2f64;
 }
+.overview__icon-location {
+  margin-right: 0.25rem;
+}
+.overview__location {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.overview__rating {
+  background-color: #eb2f64;
+  margin-left: 3.2rem;
+  color: #fff;
+  align-self: stretch;
+  padding: 1.6rem;
+  padding: 0 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.overview__rating-count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.overview__rating-average {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn--inline {
+  border: none;
+  color: #eb2f64;
+  background-color: transparent;
+  font-size: inherit;
+  border-bottom: 0.1rem solid currentColor;
+  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+}
+.btn--inline:hover {
+  color: #333;
+}
+.btn--inline:focus {
+  outline: none;
+  animation: pulsate infinite 1s linear;
+}
+
 .header {
   font-size: 1.44rem;
   padding: 0 3.2rem;

@@ -1,0 +1,13 @@
+@keyframes pulsate {
+    0%{
+        
+    }
+    50% {
+        transform: scale(1.05) translateY(-.2rem);
+        box-shadow: 0 $default-font-size / 2 $default-font-size * 2.5 rgba($color-black, .25);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        box-shadow: none;
+    }
+}

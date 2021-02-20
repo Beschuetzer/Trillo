@@ -133,10 +133,14 @@
 //overview
 .overview {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    &__heading {
 
+    &__heading {
+        font-size: $default-font-size * 1.5;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: $default-font-size $default-font-size $default-font-size 2 * $default-font-size;
     }
     &__stars {
         margin-right: auto;
@@ -147,24 +151,58 @@
         height: $default-font-size;
         fill: $color-primary;
     }
+    &__icon-location {
+        margin-right: .25rem;
+    }
     &__location {
-        
+        font-size: $default-font-size * .75;
+        display: flex;
+        align-items: center;
     }
     &__rating {
-        
+        background-color: $color-primary;
+        margin-left: $default-font-size * 2;
+        color: $color-white;
+        align-self: stretch;
+        padding: $default-font-size;
+        padding: 0 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     &__rating-count {
-        
+        font-size: $default-font-size / 2;
+        text-transform: uppercase;
     }
     &__rating-average {
-        
+        font-size: $default-font-size * 1.25;
+        font-weight: 300;
     }
 }
 
 //////////////////////////////////////////////
 //button
-.button {
+.btn {
+    cursor: pointer;
     &--inline {
-        
+        border: none;
+        color: $color-primary;
+        background-color: transparent;
+        font-size: inherit;
+        border-bottom: .1rem solid currentColor;
+        padding: .25rem .25rem .25rem .25rem;
+        display: inline-block;
+
+        transition: color .2s ease-in-out;
+
+        &:hover{
+            color: $color-grey-dark-1;
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate infinite 1s linear;
+        }
     }
 }
