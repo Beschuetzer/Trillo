@@ -270,6 +270,18 @@ body {
   display: block;
 }
 
+.overview {
+  display: flex;
+  align-items: center;
+}
+.overview__stars {
+  margin-right: auto;
+}
+.overview__icon-star, .overview__icon-location {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #eb2f64;
+}
 .header {
   font-size: 1.44rem;
   padding: 0 3.2rem;

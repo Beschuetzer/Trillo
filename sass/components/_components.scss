@@ -129,3 +129,42 @@
         display: block;
     }
 }
+//////////////////////////////////////////////
+//overview
+.overview {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    &__heading {
+
+    }
+    &__stars {
+        margin-right: auto;
+        // flex: 1;
+    }
+    &__icon-star, &__icon-location {
+        width: $default-font-size;
+        height: $default-font-size;
+        fill: $color-primary;
+    }
+    &__location {
+        
+    }
+    &__rating {
+        
+    }
+    &__rating-count {
+        
+    }
+    &__rating-average {
+        
+    }
+}
+
+//////////////////////////////////////////////
+//button
+.button {
+    &--inline {
+        
+    }
+}
