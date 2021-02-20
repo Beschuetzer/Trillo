@@ -2,7 +2,7 @@
     font-size: $default-font-size * .9;
     padding: 0 $default-font-size * 2;
     background-color: $color-white;
-    border-bottom: .1rem solid $color-grey-dark-2;
+    border-bottom: $line;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,4 +103,22 @@
     text-align: center;
     color: $color-grey-light-4;
     padding: $default-font-size;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $default-font-size * 3;
+    background-color: $color-grey-light-1;
+    border-top: $line;
+    border-bottom: $line;
+}
+
+.description {
+    flex: 0 0 60%;
+    margin-right: $default-font-size * 3;
+}
+.user-reviews {
+    flex: 1;
 }

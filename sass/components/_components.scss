@@ -30,8 +30,11 @@
             background-color: $color-grey-light-3;
         }
         &::-webkit-input-placeholder {
-            font-weight: 100;
+            // font-weight: 100;
             color: $color-grey-light-4;
+        }
+        &:focus::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
         }
     }
     &__button {
