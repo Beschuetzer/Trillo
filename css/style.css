@@ -262,6 +262,14 @@ body {
   font-style: italic;
 }
 
+.gallery {
+  display: flex;
+}
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
 .header {
   font-size: 1.44rem;
   padding: 0 3.2rem;
@@ -283,7 +291,6 @@ body {
   margin: 9.6rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: 0 1.6rem 6.4rem rgba(0, 0, 0, 0.33);
-  min-height: 40rem;
 }
 
 .sidebar {
@@ -292,7 +299,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 50rem;
   user-select: none;
 }
 
