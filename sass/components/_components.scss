@@ -265,7 +265,7 @@
     align-items: center;
     &__photo {
         box-sizing: content-box;
-        width: 4.2rem;
+        width: $default-font-size * 2;
         border-radius: 50%;
         border: .3rem solid $color-white;
 
@@ -274,6 +274,7 @@
         }
     }
     &__count {
+        max-width: 66%;
     }
     &__friends {
         // margin-left: auto;

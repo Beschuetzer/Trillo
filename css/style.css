@@ -413,12 +413,15 @@ body {
 }
 .recommend__photo {
   box-sizing: content-box;
-  width: 4.2rem;
+  width: 3.2rem;
   border-radius: 50%;
   border: 0.3rem solid #fff;
 }
 .recommend__photo:not(:last-child) {
   margin-right: -1.44rem;
+}
+.recommend__count {
+  max-width: 66%;
 }
 .review {
   overflow: hidden;
