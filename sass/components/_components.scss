@@ -96,18 +96,18 @@
         fill: $color-grey-dark-2;
     }
     &__notification {
-        font-size: $default-font-size / 2;
-        height: $default-font-size * 1;
-        width: $default-font-size * 1;
+        font-size: .6875 * $default-font-size;
+        height: $default-font-size * 1.375;
+        width: $default-font-size * 1.375;
         border-radius: 50%;
-        background-color: $color-primary;
-        color: $color-white;
+        background-color: #eb2f64;
+        color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
         top: 27.5%;
-        right: 20%;
+        right: 10%;
     }
     &__user-photo {
         height: 1.75 * $default-font-size;
@@ -161,6 +161,7 @@
         font-size: $default-font-size * .75;
         display: flex;
         align-items: center;
+        transform: translateY(-0.2rem);
     }
     &__rating {
         background-color: $color-primary;
@@ -213,13 +214,13 @@
 //////////////////////////////////////////////
 //PARAGRAPH
 .paragraph {
-    padding: 0 $default-font-size * 1.5;
+    padding: 0 $default-font-size * 2;
     &:first-child {
-        padding-top: $default-font-size * 1.5;
+        padding-top: $default-font-size * 2;
 
     }
     &:not(:last-of-type) {
-        margin-bottom: $default-font-size * 1.5;
+        margin-bottom: $default-font-size * 2;
     }
 }
 
@@ -228,14 +229,16 @@
 .list {
     list-style: none;
     column-count: 2;
-    margin: $default-font-size * 1.5 0 $default-font-size ;
-    padding: $default-font-size * 1.5;
+    margin: $default-font-size * 2 0 $default-font-size ;
+    padding: $default-font-size * 2.3125;
     border-top: $line;
     border-bottom: $line;
 
     &__item {
         margin-bottom: $default-font-size / 2;
-        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     &__item::before {
             content: '';
@@ -283,5 +286,65 @@
     &__friends {
         // margin-left: auto;
     }
-    
 }
+
+//////////////////////////////////////////////
+//REVIEW
+.review {
+    overflow: hidden;
+    position: relative;
+    box-shadow: $shadow-light;
+    font-size: $default-font-size * .85;
+    padding: $default-font-size * 2;
+    background-color: $color-white;
+    &:not(:last-child) {
+        margin-bottom: $default-font-size * 2;
+    }
+    &__rating {
+        margin-left: auto;
+    }
+    &__text {
+        margin-bottom: $default-font-size;
+        z-index: 4;
+        position: relative;
+    }
+    &__user {
+        // padding: 3.2rem 0 0 0;
+        display: flex;
+        align-items: center;
+    }
+    &__photo {
+        height: $default-font-size * 3;
+        width: $default-font-size * 3;
+        border-radius: 50%;
+        margin-right: .8rem;
+    }
+    &__user-box {
+        
+    }
+    &__user-name {
+        font-size: $default-font-size * .66;
+        font-weight: 600;
+        text-transform: uppercase;
+        // margin-bottom: $default-font-size * .25;
+    }           
+    &__user-date {
+        font-size: $default-font-size * .5;
+        color: $color-grey-dark-3;
+    }  
+    &__rating {
+        font-size: $default-font-size * 1.5;
+        color: $color-primary;
+    }
+
+    &::before {
+        line-height: .68;
+        content: '\201c';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: $default-font-size * 10;
+        color: $color-grey-light-2;
+        font-family: sans-serif;
+    }
+}                 
