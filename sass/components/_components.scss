@@ -338,12 +338,18 @@
         color: $color-grey-light-2;
         font-family: sans-serif;
     }
+
+    @include respond(tab-port) {
+        &:first-child{
+            margin-top: $default-font-size * 2;
+        }
+    }
 }     
 
 .cta {
 
     // color: $color-grey-dark-1;
-    padding: $default-font-size * 2 0;
+    padding: $default-font-size * 2;
     text-align: center;
     &__book-now {
         text-transform: uppercase;

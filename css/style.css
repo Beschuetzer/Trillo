@@ -59,7 +59,7 @@ html {
 }
 @media only screen and (max-width: 29em) {
   html {
-    font-size: 1.5038vmin;
+    font-size: 1.35vmin;
   }
 }
 
@@ -475,9 +475,14 @@ body {
   color: #f4f2f2;
   font-family: sans-serif;
 }
+@media only screen and (max-width: 56.25em) {
+  .review:first-child {
+    margin-top: 3.2rem;
+  }
+}
 
 .cta {
-  padding: 3.2rem 0;
+  padding: 3.2rem;
   text-align: center;
 }
 .cta__book-now {
@@ -545,10 +550,27 @@ body {
   align-items: center;
   user-select: none;
 }
+.header__logo-box {
+  display: flex;
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 0.1rem solid #002a57;
+  }
+}
 
 .content {
   display: flex;
   justify-content: flex-start;
+}
+@media only screen and (max-width: 37.5em) {
+  .content {
+    flex-direction: column;
+  }
 }
 
 .container {
@@ -582,6 +604,14 @@ body {
 .side-nav__item:not(:last-child) {
   margin-bottom: 1.6rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .side-nav__item {
+    width: 100%;
+  }
+  .side-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
 .side-nav__item::before {
   content: "";
   position: absolute;
@@ -612,11 +642,28 @@ body {
   position: relative;
   z-index: 10;
 }
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+  }
+}
 .side-nav__icon {
   height: 2rem;
   width: 2rem;
   margin-right: 1.6rem;
   fill: currentColor;
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+  }
 }
 
 .legal {
@@ -624,6 +671,11 @@ body {
   text-align: center;
   color: #ccc;
   padding: 1.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .legal {
+    display: none;
+  }
 }
 
 .details {
@@ -635,12 +687,22 @@ body {
   border-top: 0.1rem solid #f4f2f2;
   border-bottom: 0.1rem solid #f4f2f2;
 }
+@media only screen and (max-width: 56.25em) {
+  .details {
+    flex-direction: column;
+  }
+}
 
 .description {
   flex: 0 0 60%;
   margin-right: 3.2rem;
   background-color: #fff;
   box-shadow: 0 1.6rem 4.8rem rgba(0, 0, 0, 0.11);
+}
+@media only screen and (max-width: 56.25em) {
+  .description {
+    margin-right: 0;
+  }
 }
 
 .user-reviews {
