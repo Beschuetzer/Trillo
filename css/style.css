@@ -343,7 +343,11 @@ body {
   border-bottom: 0.1rem solid currentColor;
   padding: 0.25rem 0.25rem 0.25rem 0.25rem;
   display: inline-block;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, margin 0.2s cubic-bezier(1, 0, 0, 1);
+}
+.btn--inline span {
+  margin-left: 0.4rem;
+  transition: margin-left 0.2s ease;
 }
 .btn--inline:hover {
   color: #333;
@@ -351,6 +355,9 @@ body {
 .btn--inline:focus {
   outline: none;
   animation: pulsate infinite 1s linear;
+}
+.btn:hover span {
+  margin-left: 0.8rem;
 }
 
 .paragraph {
@@ -581,6 +588,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
