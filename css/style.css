@@ -59,7 +59,7 @@ html {
 }
 @media only screen and (max-width: 29em) {
   html {
-    font-size: 1.35vmin;
+    font-size: 1.44vmin;
   }
 }
 
@@ -294,6 +294,11 @@ body {
   letter-spacing: 1px;
   padding: 1.6rem 1.6rem 1.6rem 3.2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    padding: 1.6rem;
+  }
+}
 .overview__stars {
   margin-right: auto;
 }
@@ -322,6 +327,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    margin-left: 1.6rem;
+  }
 }
 .overview__rating-count {
   font-size: 0.8rem;
@@ -369,12 +379,20 @@ body {
 .paragraph:not(:last-of-type) {
   margin-bottom: 3.2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .paragraph:first-child {
+    padding-top: 1.6rem;
+  }
+  .paragraph:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
+}
 
 .list {
   list-style: none;
   column-count: 2;
   margin: 3.2rem 0 1.6rem;
-  padding: 3.7rem;
+  padding: 3.2rem;
   border-top: 0.1rem solid #f4f2f2;
   border-bottom: 0.1rem solid #f4f2f2;
 }
@@ -400,6 +418,17 @@ body {
     -webkit-mask-size: cover;
     background-color: #002a57;
     mask-size: cover;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .list {
+    padding: 1.6rem;
+    margin: 1.6rem 0 1.6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .list {
+    column-count: 1;
   }
 }
 
@@ -433,6 +462,11 @@ body {
 }
 .review:not(:last-child) {
   margin-bottom: 3.2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .review:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
 }
 .review__rating {
   margin-left: auto;
@@ -476,8 +510,11 @@ body {
   font-family: sans-serif;
 }
 @media only screen and (max-width: 56.25em) {
+  .review {
+    padding: 1.6rem;
+  }
   .review:first-child {
-    margin-top: 3.2rem;
+    margin-top: 1.6rem;
   }
 }
 
@@ -490,6 +527,16 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 2.4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .cta__book-now {
+    margin-bottom: 1.2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .cta {
+    padding: 1.6rem;
+  }
 }
 
 .cta-btn {
@@ -645,6 +692,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .side-nav__link:link, .side-nav__link:visited {
     flex-direction: column;
+    padding: 0.8rem;
   }
 }
 .side-nav__icon {
@@ -690,6 +738,7 @@ body {
 @media only screen and (max-width: 56.25em) {
   .details {
     flex-direction: column;
+    padding: 1.6rem;
   }
 }
 

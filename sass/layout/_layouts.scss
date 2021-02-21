@@ -112,6 +112,7 @@
 
         @include respond(phone) {
             flex-direction: column;
+            padding: $default-font-size * .5;
         }
     }
     &__icon {
@@ -157,6 +158,7 @@
 
     @include respond(tab-port) {
         flex-direction: column;
+        padding: $default-font-size;
     }
 }
 

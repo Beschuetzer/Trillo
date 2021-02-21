@@ -131,6 +131,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: $default-font-size $default-font-size $default-font-size 2 * $default-font-size;
+
+        @include respond(phone) {
+            padding: $default-font-size;
+        }
     }
     &__stars {
         margin-right: auto;
@@ -161,6 +165,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include respond(phone) {
+            margin-left: $default-font-size;
+        }
     }
     &__rating-count {
         font-size: $default-font-size / 2;
@@ -217,13 +225,23 @@
     &:not(:last-of-type) {
         margin-bottom: $default-font-size * 2;
     }
+
+    @include respond(tab-port) {
+        &:first-child {
+            padding-top: $default-font-size;
+    
+        }
+        &:not(:last-of-type) {
+            margin-bottom: $default-font-size;
+        }
+    }
 }
 
 .list {
     list-style: none;
     column-count: 2;
     margin: $default-font-size * 2 0 $default-font-size ;
-    padding: $default-font-size * 2.3125;
+    padding: $default-font-size * 2;
     border-top: $line;
     border-bottom: $line;
 
@@ -253,6 +271,14 @@
                 mask-size: cover;
             }
 
+    }
+
+    @include respond(tab-port) {
+        padding: $default-font-size;
+        margin: 1.6rem 0 1.6rem;
+    }
+    @include respond(phone) {
+        column-count: 1;
     }
 }
 
@@ -290,6 +316,10 @@
     background-color: $color-white;
     &:not(:last-child) {
         margin-bottom: $default-font-size * 2;
+
+        @include respond(phone) {
+            margin-bottom: $default-font-size;
+        }
     }
     &__rating {
         margin-left: auto;
@@ -340,8 +370,9 @@
     }
 
     @include respond(tab-port) {
+        padding: $default-font-size;
         &:first-child{
-            margin-top: $default-font-size * 2;
+            margin-top: $default-font-size;
         }
     }
 }     
@@ -356,6 +387,14 @@
         font-size: $default-font-size * 1;
         font-weight: 400;
         margin-bottom: $default-font-size * 1.5;
+
+        @include respond(tab-port) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        padding: $default-font-size;
     }
 }
 
