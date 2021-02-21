@@ -359,4 +359,95 @@
         color: $color-grey-light-2;
         font-family: sans-serif;
     }
-}                 
+}     
+
+//////////////////////////////////////////////
+//CTA
+.cta {
+
+    // color: $color-grey-dark-1;
+    padding: $default-font-size * 2 0;
+    text-align: center;
+    &__book-now {
+        text-transform: uppercase;
+        font-size: $default-font-size * 1;
+        font-weight: 400;
+        margin-bottom: $default-font-size * 1.5;
+    }
+}
+
+//////////////////////////////////////////////
+//CTA button
+.cta-btn {
+    cursor: pointer;
+    width: 33%;
+    min-width: $default-font-size * 15;
+    height: $default-font-size * 4;
+    overflow: hidden;
+    position: relative;
+    font-size: $default-font-size;
+    border: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 1000px;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
+    color: $color-white;
+    -webkit-transition: background-image .75s cubic-bezier(1,0,0,1);
+    transition: background-image .75s cubic-bezier(1,0,0,1);
+
+    &:hover {
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary);
+    }
+    &:focus {
+        outline: none;
+        animation: pulsate infinite 1s cubic-bezier(1,0,0,1);
+    }
+
+    //MY APPROACH
+    & > * {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: top .75s cubic-bezier(1,0,0,1);
+    }
+    &__visible {
+        top: 50%;
+        padding: $default-font-size * 1.5 $default-font-size * 0;
+    }
+    &__invisible {
+        top: -100%;
+        padding: $default-font-size * 1.5 $default-font-size * 0;
+    }
+    &:hover &__invisible {
+        top: 50%;
+    }
+    &:hover &__visible {
+        top: -100%;
+    }
+
+    //JONAS'S APPROACH
+    // & > * {
+    //     display: inline-block;
+    //     height: 100%;
+    //     width: 100%;
+    //     transition: top .75s cubic-bezier(1,0,0,1), transform .75s cubic-bezier(1,0,0,1);
+    // }
+    // &__visible {
+    //     padding: $default-font-size * 1.5 $default-font-size * 3;
+    // }
+    // &__invisible {
+    //     position: absolute;
+    //     top: -100%;
+    //     left: 0%;
+    //     padding: $default-font-size * 1.5 $default-font-size * 0;
+    // }
+    // &:hover &__invisible {
+    //     top: 0%;
+    // }
+    // &:hover &__visible {
+    //     transform: translateY(100%);
+    // }
+}

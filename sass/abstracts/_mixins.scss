@@ -38,7 +38,7 @@
     @mixin respond($breakpoint) {
         //the only screen condition prevents styles from applying if user prints out something
         @if $breakpoint == small-font {
-            @media only screen and (max-width: 25em){@content;}   //600px
+            @media only screen and (max-width: 29em){@content;}   //450px
         }
         @if $breakpoint == phone {
             @media only screen and (max-width: 37.5em){@content;}   //600px
