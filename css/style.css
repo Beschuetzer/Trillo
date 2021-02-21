@@ -170,9 +170,6 @@ body {
 .logo {
   height: 3.2rem;
   margin-left: 1.8rem;
-  background-color: #0b2e53;
-  -webkit-mask-image: url(../img/logo.png);
-  -webkit-mask-size: cover;
 }
 
 .search {

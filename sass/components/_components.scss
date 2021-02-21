@@ -1,15 +1,7 @@
-//////////////////////////////////////////////
-//LOGO
 .logo {
     height: $default-font-size * 2;
     margin-left: $default-font-size * 1.125;
-    background-color: $color-primary-dark;
-    -webkit-mask-image: url(../img/logo.png);
-    -webkit-mask-size: cover;
 }
-
-//////////////////////////////////////////////
-//search
 .search {
     flex: 0 0 40%;
     display: flex;
@@ -65,11 +57,6 @@
     }
 }
 
-
-
-
-//////////////////////////////////////////////
-//user navigation
 .user-nav {
     height: $default-font-size * 3;
     align-self: stretch;
@@ -123,8 +110,6 @@
 
 }
 
-//////////////////////////////////////////////
-//GALLERY
 .gallery{
     display: flex;
     &__item {
@@ -135,8 +120,7 @@
         display: block;
     }
 }
-//////////////////////////////////////////////
-//overview
+
 .overview {
     display: flex;
     align-items: center;
@@ -188,8 +172,6 @@
     }
 }
 
-//////////////////////////////////////////////
-//button
 .btn {
     cursor: pointer;
     &--inline {
@@ -226,8 +208,6 @@
     }
 }
 
-//////////////////////////////////////////////
-//PARAGRAPH
 .paragraph {
     padding: 0 $default-font-size * 2;
     &:first-child {
@@ -239,8 +219,6 @@
     }
 }
 
-//////////////////////////////////////////////
-//LIST
 .list {
     list-style: none;
     column-count: 2;
@@ -277,8 +255,7 @@
 
     }
 }
-//////////////////////////////////////////////
-//RECOMMEND
+
 .recommend {
     padding: 0 $default-font-size $default-font-size $default-font-size;
     font-size: $default-font-size * .85;
@@ -303,8 +280,6 @@
     }
 }
 
-//////////////////////////////////////////////
-//REVIEW
 .review {
     overflow: hidden;
     position: relative;
@@ -364,8 +339,6 @@
     }
 }     
 
-//////////////////////////////////////////////
-//CTA
 .cta {
 
     // color: $color-grey-dark-1;
@@ -379,8 +352,6 @@
     }
 }
 
-//////////////////////////////////////////////
-//CTA button
 .cta-btn {
     cursor: pointer;
     width: 33%;
