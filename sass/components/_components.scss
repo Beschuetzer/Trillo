@@ -300,12 +300,13 @@
             background-image: url(../img/chevron-thin-right.svg);
 
             //using masks (newer browsers)
-            @supports(-webkit-mask-image: url(../img/chevron-thin-right.svg)) {
+            @supports(-webkit-mask-image: url() or (mask-image: url())) {
                 -webkit-mask-image: url(../img/chevron-thin-right.svg);
                 mask-image: url(../img/chevron-thin-right.svg);
                 -webkit-mask-size: cover;
                 background-color: $color-primary;
                 mask-size: cover;
+                background-image: none;
             }
 
     }
