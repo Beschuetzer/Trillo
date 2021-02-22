@@ -38,11 +38,11 @@
         }
         @include respond(phone) {
             // font-size: 37.5%;
-            font-size: 50%;
+            font-size: 57.5%;
 
         }
         @include respond(small-font) {
-            font-size: 1.7vmin;
+            font-size: 1.92vmin;
         }
 
         box-sizing: border-box;

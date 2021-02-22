@@ -124,6 +124,11 @@
 .overview {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include respond(wrap-start) {
+        padding: 1.6rem;
+    }
 
     &__heading {
         font-size: $default-font-size * 1.5;
@@ -132,8 +137,8 @@
         letter-spacing: 1px;
         padding: $default-font-size $default-font-size $default-font-size 2 * $default-font-size;
 
-        @include respond(phone) {
-            padding: $default-font-size;
+        @include respond(wrap-start) {
+            padding: 0 1.6rem 0 0;
         }
     }
     &__stars {
@@ -166,8 +171,13 @@
         align-items: center;
         justify-content: center;
 
+        @include respond(wrap-start) {
+            width: 100%;
+            padding-left: 0;
+            margin-left: 0;
+        }
         @include respond(phone) {
-            margin-left: $default-font-size;
+            // margin-left: $default-font-size;
         }
     }
     &__rating-count {
