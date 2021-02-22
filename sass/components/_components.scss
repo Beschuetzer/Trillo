@@ -8,6 +8,12 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(phone) {
+        order: 1;
+        flex: 1 100%;
+        background-color: $color-grey-light-2;
+    }
+
     &__input {
         font-family: inherit;
         border-radius: 100px;
@@ -31,8 +37,18 @@
         &:focus::-webkit-input-placeholder {
             color: $color-grey-dark-2;
         }
+
+        @include respond(phone) {
+            margin-right: 0;
+            margin-left: 0;
+            padding: $default-font-size / 2 $default-font-size $default-font-size / 2 $default-font-size / 4;
+            &:focus {
+                background-color: $color-grey-light-2;
+            }
+        }
     }
     &__button {
+        cursor: pointer;
         border: none;
         background-color: $color-grey-light-2;
         &:focus {
@@ -40,6 +56,9 @@
         }
         &:active {
             transform: translateY(.2rem);
+        }
+        @include respond(phone) {
+            margin-left: -$default-font-size * 3;
         }
     }
     &__icon {
@@ -52,9 +71,16 @@
     &__input:focus ~ &__button>&__icon {
         fill: $color-grey-dark-1;
     }
-    &__input:focus ~ &__button{
+    &__input:focus ~ &__button {
         background-color: $color-grey-light-3;
     }
+
+    @include respond(phone) {
+        &__input:focus ~ &__button {
+            background-color: $color-grey-light-2;
+        }
+    }
+    
 }
 
 .user-nav {
@@ -127,7 +153,7 @@
     flex-wrap: wrap;
 
     @include respond(wrap-start) {
-        padding: 1.6rem;
+        padding: $default-font-size;
     }
 
     &__heading {
@@ -138,7 +164,7 @@
         padding: $default-font-size $default-font-size $default-font-size 2 * $default-font-size;
 
         @include respond(wrap-start) {
-            padding: 0 1.6rem 0 0;
+            padding: 0 $default-font-size 0 0;
         }
     }
     &__stars {
@@ -151,7 +177,7 @@
         fill: $color-primary;
     }
     &__icon-location {
-        margin-right: .25rem;
+        margin-right: $default-font-size * .15625;
     }
     &__location {
         font-size: $default-font-size * .75;
@@ -165,7 +191,7 @@
         color: $color-white;
         align-self: stretch;
         padding: $default-font-size;
-        padding: 0 1.6rem;
+        padding: 0 $default-font-size;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -173,8 +199,9 @@
 
         @include respond(wrap-start) {
             width: 100%;
-            padding-left: 0;
+            padding: $default-font-size / 2 0;
             margin-left: 0;
+            margin-top: $default-font-size / 2;
         }
         @include respond(phone) {
             // margin-left: $default-font-size;
@@ -198,7 +225,7 @@
         background-color: transparent;
         font-size: inherit;
         border-bottom: .1rem solid currentColor;
-        padding: .25rem .25rem .25rem .25rem;
+        padding: $default-font-size * .15625 $default-font-size * .15625 $default-font-size * .15625 $default-font-size * .15625;
         display: inline-block;
 
         transition: color .2s ease-in-out,
@@ -285,7 +312,7 @@
 
     @include respond(tab-port) {
         padding: $default-font-size;
-        margin: 1.6rem 0 1.6rem;
+        margin: $default-font-size 0 $default-font-size;
     }
     @include respond(phone) {
         column-count: 1;
@@ -349,7 +376,7 @@
         height: $default-font-size * 3;
         width: $default-font-size * 3;
         border-radius: 50%;
-        margin-right: .8rem;
+        margin-right: $default-font-size / 2;
     }
     &__user-box {
         

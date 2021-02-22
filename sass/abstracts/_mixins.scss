@@ -44,7 +44,7 @@
             @media only screen and (max-width: 37.5em){@content;}   //600px
         }
         @if $breakpoint == wrap-start {
-            @media only screen and (max-width: 42.25em){@content;}   //600px
+            @media only screen and (max-width: 43.125em){@content;}   //600px
         }
         @if $breakpoint == tab-port {
             @media only screen and (max-width: 56.25em){@content;}  //900px
