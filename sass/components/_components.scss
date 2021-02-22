@@ -139,8 +139,6 @@
         z-index: 100000;
         display: flex;
         flex-direction: column;
-        opacity: 0;
-        visibility: hidden;
         box-shadow: $shadow-dark;
         color: $color-primary;
         position: absolute;
@@ -154,16 +152,25 @@
         &-item {
             color: inherit;
             text-decoration: none;
-            width: 100%;
-            padding: $default-font-size / 2 $default-font-size;
+            // width: 100%;
+            padding: $default-font-size * .75 $default-font-size;
 
             text-transform: uppercase;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            transition: width .25s cubic-bezier(1,0,0,1),
+                        opacity .25s cubic-bezier(1,0,0,1);
         }
         &-icon-box {
             display: flex;
             margin-left: .5 * $default-font-size;
+        }
+        &-span {
+            position: absolute;
+            right: 100%;
+            transition: right .33s cubic-bezier(1,0,0,1),
+                        opacity .33s .135s cubic-bezier(1,1,1,1);
         }
         &-icon {
             height: 2rem;
