@@ -9,6 +9,8 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon-blue.png">
         
         <title>Booker &mdash; Your all-in-one booking app</title>
+
+        <script defer src="JS/main.js"></script>
     </head>
     <body>
         <div class="container">
@@ -40,6 +42,58 @@
                     <div class="user-nav__user">
                         <img src="img/human-1-cropped.jpg" alt="Photo of User" class="user-nav__user-photo">
                         <span class="user-nav__user-name">Arnold</span>
+                        <div class="user-nav__dropdown">
+                            <a href='#payment' class="user-nav__dropdown-item">
+                                <span class="user-nav__dropdown-span">
+                                    Payments
+                                </span> 
+                                <span class="user-nav__dropdown-icon-box">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-paypal"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href='#Message' class="user-nav__dropdown-item">
+                                <span class="user-nav__dropdown-span">
+                                    Messages
+                                </span> 
+                                <span class="user-nav__dropdown-icon-box">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-chat"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href='#search' class="user-nav__dropdown-item">
+                                <span class="user-nav__dropdown-span">
+                                    Search
+                                </span> 
+                                <span class="user-nav__dropdown-icon-box">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href='#settings' class="user-nav__dropdown-item">
+                                <span class="user-nav__dropdown-span">
+                                    Settings
+                                </span> 
+                                <span class="user-nav__dropdown-icon-box">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-tools"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href='#logout' class="user-nav__dropdown-item">
+                                <span class="user-nav__dropdown-span">
+                                    logout
+                                </span> 
+                                <span class="user-nav__dropdown-icon-box">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-log-out"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </header>

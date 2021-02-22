@@ -22,6 +22,10 @@
         margin: 0;
         padding: 0;
         box-sizing: inherit;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
     }
     html {
         /* 62.5% of the browser supplied font-size is usually 16px */
@@ -58,7 +62,6 @@
         min-height: 100vh;
         background-repeat: no-repeat;
         color: $color-grey-dark-2;
-
     }
     //Style selected text
     ::selection {
