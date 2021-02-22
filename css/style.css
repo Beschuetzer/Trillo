@@ -47,19 +47,14 @@ html {
     font-size: 56.25%;
   }
 }
-@media only screen and (max-width: 56.25em) {
-  html {
-    font-size: 43.75%;
-  }
-}
 @media only screen and (max-width: 37.5em) {
   html {
-    font-size: 37.5%;
+    font-size: 50%;
   }
 }
 @media only screen and (max-width: 29em) {
   html {
-    font-size: 1.44vmin;
+    font-size: 1.7vmin;
   }
 }
 
@@ -449,10 +444,12 @@ body {
 .recommend__photo:not(:last-child) {
   margin-right: -1.44rem;
 }
-.recommend__count {
-  max-width: 66%;
+.recommend__friends {
+  display: flex;
 }
+
 .review {
+  width: 100%;
   overflow: hidden;
   position: relative;
   box-shadow: 0 1.6rem 4.8rem rgba(0, 0, 0, 0.11);
@@ -621,9 +618,16 @@ body {
 }
 
 .container {
-  margin: 4.8rem;
+  max-width: 120rem;
+  margin: 4.8rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: 0 1.6rem 6.4rem rgba(0, 0, 0, 0.33);
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 .sidebar {
@@ -653,7 +657,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .side-nav__item {
-    width: 100%;
+    flex: 1;
   }
   .side-nav__item:not(:last-child) {
     margin-bottom: 0;

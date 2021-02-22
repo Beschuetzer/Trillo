@@ -30,12 +30,16 @@
 }
 
 .container {
-    // max-width: 120rem;
-    margin: $default-font-size * 3;
+    max-width: 120rem;
+    margin: $default-font-size * 3 auto;
     background-color: var(--color-grey-light-2);
     box-shadow: 0 $default-font-size $default-font-size * 4 rgba($color-black, $box-shadow-dark);
     
     // min-height: 40rem;
+    @include respond(tab-land) {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
 .sidebar {
@@ -72,7 +76,7 @@
             &:not(:last-child) {
                 margin-bottom: 0;
             }
-            width: 100%;
+            flex: 1;
         }
     }
     &__item::before {

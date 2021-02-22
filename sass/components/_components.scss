@@ -300,14 +300,15 @@
         }
     }
     &__count {
-        max-width: 66%;
+        // max-width: 66%;
     }
     &__friends {
-        // margin-left: auto;
+        display: flex;
     }
 }
 
 .review {
+    width: 100%;
     overflow: hidden;
     position: relative;
     box-shadow: $shadow-light;

@@ -34,13 +34,15 @@
             font-size: 56.25%;
         }
         @include respond(tab-port) {
-            font-size: 43.75%;
+            // font-size: 43.75%;
         }
         @include respond(phone) {
-            font-size: 37.5%;
+            // font-size: 37.5%;
+            font-size: 50%;
+
         }
         @include respond(small-font) {
-            font-size: 1.44vmin;
+            font-size: 1.7vmin;
         }
 
         box-sizing: border-box;
