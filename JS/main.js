@@ -1,3 +1,4 @@
+let hasHandled = false;
 const userIcon = document.querySelector('.user-nav__user');
 userIcon.addEventListener('click', navHandler);
 
@@ -14,9 +15,12 @@ const links = document.querySelectorAll('.user-nav__dropdown-item');
 links.forEach(link => link.addEventListener('click', linkClickHandler));
 
 function linkClickHandler(e) {
+    e.stopPropagation();
     const linkName = e.currentTarget?.children[0]?.textContent;
     if (linkName?.match(/search/i)) document.querySelector('.search__input').focus();
-    else if (linkName?.match(/message/i)) navHandler({currentTarget: msgIcon});
+    else if (linkName?.match(/message/i)) {
+        navHandler({currentTarget: msgIcon});
+    }
 }
 
 
