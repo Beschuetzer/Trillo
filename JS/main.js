@@ -21,14 +21,13 @@ function linkClickHandler(e) {
 
 
 function navHandler(e) {
-    if (e.currentTarget.id.match(/messages/i)) userIcon?.children[userIcon.children?.length -1].classList.add('hidden');
-    else if (e.currentTarget.className.match(/user-nav__user/i)) msgIcon?.children[msgIcon.children?.length - 1].classList.add('hidden');
-    e.currentTarget?.children[e.currentTarget.children?.length -1].classList.toggle('hidden');
+    if (e.currentTarget.id.match(/messages/i)) userIcon?.lastElementChild.classList.add('hidden');
+    else if (e.currentTarget.className.match(/user-nav__user/i)) msgIcon?.lastElementChild.classList.add('hidden');
+    e.currentTarget?.lastElementChild.classList.toggle('hidden');
 }
 
 function dropDownEnterHandler(e) {
-
-    document.querySelector('.user-nav__dropdown').style.width = '100%';
+    e.currentTarget.parentNode.style.width = '100%';
     for(i = 0; i < userNavDropdownItems.length; i++) {
         const child = userNavDropdownItems[i]?.children[0];
         child.classList?.remove('hidden');
