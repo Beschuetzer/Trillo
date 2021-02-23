@@ -27,13 +27,18 @@ function navHandler(e) {
 }
 
 function dropDownEnterHandler(e) {
-    e.currentTarget.parentNode.style.width = '100%';
-    for(i = 0; i < userNavDropdownItems.length; i++) {
-        const child = userNavDropdownItems[i]?.children[0];
-        child.classList?.remove('hidden');
-        child.style.right = '25%';
-        // e.currentTarget.children[0].classList.remove('hidden');
+    const parent = e.currentTarget.parentNode;
+    if (parent.className?.match(/dropdown-user/)) { 
+        parent.style.width = '100%';
+        for(i = 0; i < userNavDropdownItems.length; i++) {
+            const child = userNavDropdownItems[i]?.children[0];
+            child.classList?.remove('hidden');
+            child.style.right = '25%';
+            // e.currentTarget.children[0].classList.remove('hidden');
+        }
     }
+    else if (parent.className?.match(/dropdown-message/)) parent.style.width = '33rem';
+  
 }
 
 // function navHandler(e) {

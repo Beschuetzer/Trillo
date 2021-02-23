@@ -148,8 +148,7 @@
         // width: 100%;
         background-image: linear-gradient(to left,$color-white, lighten($color-grey-dark-1, 66%));
         text-align: right;
-        transition: opacity .33s cubic-bezier(1,0,0,1),
-                    width 33s cubic-bezier(1,0,0,1);
+        transition: opacity .33s cubic-bezier(1,0,0,1);
 
         &-item {
             color: inherit;
