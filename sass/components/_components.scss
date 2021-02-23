@@ -150,6 +150,9 @@
         text-align: right;
         transition: opacity .33s cubic-bezier(1,0,0,1);
 
+        &-messages {
+            width: 33rem;
+        }
         &-item {
             color: inherit;
             text-decoration: none;
@@ -162,6 +165,18 @@
             align-items: center;
             transition: width .25s cubic-bezier(1,0,0,1),
                         opacity .25s cubic-bezier(1,0,0,1);
+
+            &-msg {
+                justify-content: space-between;
+            }
+            &-text {
+                font-size: $default-font-size * .75;
+            }
+            &-photo {
+                width: 3rem;
+                border-radius: 50%;
+                margin-left: $default-font-size * .75;
+            }
         }
         &-icon-box {
             display: flex;

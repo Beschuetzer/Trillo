@@ -21,7 +21,10 @@ function linkClickHandler(e) {
 
 
 function navHandler(e) {
-    if (e.currentTarget.id.match(/messages/i)) userIcon?.lastElementChild.classList.add('hidden');
+    if (e.currentTarget.id.match(/messages/i)) {
+        msgIcon?.children[msgIcon.children.length - 2].classList.add('hidden');
+        userIcon?.lastElementChild.classList.add('hidden');
+    }
     else if (e.currentTarget.className.match(/user-nav__user/i)) msgIcon?.lastElementChild.classList.add('hidden');
     e.currentTarget?.lastElementChild.classList.toggle('hidden');
 }
@@ -37,7 +40,10 @@ function dropDownEnterHandler(e) {
             // e.currentTarget.children[0].classList.remove('hidden');
         }
     }
-    else if (parent.className?.match(/dropdown-message/)) parent.style.width = '33rem';
+    // else if (parent.className?.match(/dropdown-message/)) { 
+    //     parent.style.width = '33rem';
+    //     e.currentTarget.children[0]?.classList.remove('hidden');
+    // }
   
 }
 

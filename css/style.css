@@ -322,6 +322,9 @@ body {
   text-align: right;
   transition: opacity 0.33s cubic-bezier(1, 0, 0, 1);
 }
+.user-nav__dropdown-messages {
+  width: 33rem;
+}
 .user-nav__dropdown-item {
   color: inherit;
   text-decoration: none;
@@ -331,6 +334,17 @@ body {
   justify-content: flex-end;
   align-items: center;
   transition: width 0.25s cubic-bezier(1, 0, 0, 1), opacity 0.25s cubic-bezier(1, 0, 0, 1);
+}
+.user-nav__dropdown-item-msg {
+  justify-content: space-between;
+}
+.user-nav__dropdown-item-text {
+  font-size: 1.2rem;
+}
+.user-nav__dropdown-item-photo {
+  width: 3rem;
+  border-radius: 50%;
+  margin-left: 1.2rem;
 }
 .user-nav__dropdown-icon-box {
   display: flex;
