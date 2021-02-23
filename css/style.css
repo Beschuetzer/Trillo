@@ -323,7 +323,8 @@ body {
   transition: opacity 0.33s cubic-bezier(1, 0, 0, 1);
 }
 .user-nav__dropdown-messages {
-  width: 33rem;
+  max-width: 33rem;
+  white-space: nowrap;
 }
 .user-nav__dropdown-item {
   color: inherit;

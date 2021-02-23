@@ -151,7 +151,8 @@
         transition: opacity .33s cubic-bezier(1,0,0,1);
 
         &-messages {
-            width: 33rem;
+            max-width: 33rem;
+            white-space: nowrap;
         }
         &-item {
             color: inherit;
