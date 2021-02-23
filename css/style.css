@@ -318,10 +318,9 @@ body {
   top: 102%;
   right: 0;
   background-color: #fff;
-  width: 100%;
-  background-image: linear-gradient(to left, #ffd5a9, #572d00);
+  background-image: linear-gradient(to left, #fff, #ffd5a9);
   text-align: right;
-  transition: opacity 0.33s cubic-bezier(1, 0, 0, 1);
+  transition: opacity 0.33s cubic-bezier(1, 0, 0, 1), width 33s cubic-bezier(1, 0, 0, 1);
 }
 .user-nav__dropdown-item {
   color: inherit;

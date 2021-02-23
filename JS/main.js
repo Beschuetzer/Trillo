@@ -12,6 +12,7 @@ function userIconHandler(e) {
 }
 
 function dropDownEnterHandler(e) {
+    document.querySelector('.user-nav__dropdown').style.width = '100%';
     for(i = 0; i < userNavDropdownItems.length; i++) {
         const child = userNavDropdownItems[i]?.children[0];
         child.classList?.remove('hidden');
