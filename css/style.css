@@ -339,8 +339,12 @@ body {
 .user-nav__dropdown-item-msg {
   justify-content: space-between;
 }
-.user-nav__dropdown-item-text {
+.user-nav__dropdown-item-text-container {
   font-size: 1.2rem;
+  display: flex;
+  justify-self: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .user-nav__dropdown-item-photo {
   width: 3rem;
@@ -361,7 +365,7 @@ body {
   width: 2rem;
   fill: currentColor;
 }
-.user-nav__dropdown-item:hover {
+.user-nav__dropdown-item:hover, .user-nav__dropdown-item:hover * {
   background-image: linear-gradient(to left, #002a57, #00438a);
   color: #fff;
   fill: #fff;
@@ -689,6 +693,14 @@ body {
 }
 .cta-btn:hover .cta-btn__visible {
   top: -100%;
+}
+
+.date {
+  font-size: 1.056rem;
+  text-transform: lowercase;
+  background-image: linear-gradient(to right, #002a57, black);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .header {

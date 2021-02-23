@@ -170,8 +170,12 @@
             &-msg {
                 justify-content: space-between;
             }
-            &-text {
+            &-text-container {
                 font-size: $default-font-size * .75;
+                display: flex;
+                justify-self: center;
+                align-items: flex-start;
+                flex-direction: column;
             }
             &-photo {
                 width: 3rem;
@@ -195,11 +199,7 @@
             fill: currentColor;
         }
     }
-    // &__user:focus &__dropdown {
-    //     opacity: 1;
-    //     visibility: visible;
-    // }
-    &__dropdown-item:hover {
+    &__dropdown-item:hover, &__dropdown-item:hover * {
         // background-color: $color-primary;
         background-image: linear-gradient(to left, $color-primary, lighten($color-primary, 10%));
         color: $color-white;
@@ -580,4 +580,12 @@
     // &:hover &__visible {
     //     transform: translateY(100%);
     // }
+}
+
+.date {
+    font-size: $default-font-size * .66;
+    text-transform: lowercase;
+    background-image: linear-gradient(to right, $color-primary, darken($color-grey-dark-1, 40%));
+    -webkit-background-clip: text;
+    color: transparent;
 }
